@@ -1,0 +1,68 @@
+/* Sudoku Solver Page Container */
+.sudoku-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #93beb9;
+    color: #005157;
+    font-family: "Roboto", sans-serif;
+    padding-top: 80px; /* Adjusted for navbar spacing */
+}
+
+/* Board Container */
+.board-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem auto;
+  }
+  
+  /* The ul containing the grid rows */
+.board {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+  }
+
+.board-row {
+    display: flex;
+  }
+/* Each Cell */
+.cell {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 1rem;
+    color: #005157;
+}
+
+.cell-border-bottom {
+    border-bottom: 2px solid #666;
+  }
+  .cell-border-right {
+    border-right: 2px solid #666;
+  }
+  
+  /* Highlight invalid cells */
+  .cell-invalid {
+    background-color: #f66;
+    color: #fff;
+  }
+  
+  /* Highlight empty cells after puzzle is solved */
+  .cell-error-empty {
+    background-color: #fcc;
+  }
+
+  /* Add bold lines for 3x3 subgrid separation */
+.cell:nth-child(3n) {
+    border-right: 5px solid black;
+}
+
+.board-row:nth-child(3n) .cell {
+    border-bottom: 5px solid black;
+}

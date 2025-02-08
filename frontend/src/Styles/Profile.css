@@ -1,0 +1,103 @@
+/* Ensure the profile container is centered and has space for title */
+.profile-container {
+  display: flex;
+  flex-direction: column; /* Arrange children vertically */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  min-height: 100vh; /* Ensures it takes at least the full height of the screen */
+  background-color: #93beb9; /* Light gray background for the page */
+  padding-top: 0.5px; /* Prevent navbar overlap */
+}
+
+/* Title of the profile, positioned outside the box */
+.profile-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #005157; /* Dark teal color matching navbar */
+  margin-bottom: 20px; /* Reduced margin to adjust space between title and profile box */
+  font-family: "Comic Sans MS", sans-serif; /* Consistent with navbar font */
+  position: relative;
+  z-index: 10; /* Ensure title stays above the box */
+}
+
+/* Profile box that contains all information */
+.profile-box {
+  background-color: #f1f1f1;
+  border-radius: 15px; /* Rounded corners */
+  padding: 50px;
+  width: 80%;
+  max-width: 500px; /* Maximum width for the box */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Profile image styling */
+.profile-image img {
+  border-radius: 50%;
+  width: 250px; /* Increased the width of the image */
+  height: 250px; /* Increased the height of the image */
+  object-fit: cover; /* Ensure image covers the container */
+  margin-bottom: 30px; /* Increased margin for better spacing */
+  border: 5px solid #93beb9; /* Light cyan border around the image */
+}
+
+/* Photo upload styling */
+.photo-upload {
+  margin-top: 20px; /* Space between image and upload button */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.photo-upload input {
+  padding: 3px; /* Increased padding for better button-like appearance */
+  font-size: 1rem; /* Normal font size */
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  color: #005157;
+  cursor: pointer;
+  width: auto;
+  transition: background-color 0.3s ease;
+}
+
+.photo-upload input:hover {
+  background-color: #00eaff; /* Add hover effect for a more button-like feel */
+  color: white; /* Text color change on hover */
+}
+
+/* Profile information styling */
+.profile-info {
+  width: 100%;
+}
+
+.profile-info label {
+  display: block;
+  margin-bottom: 5px;
+  color: #005157; /* Dark teal color for labels */
+  font-weight: bold;
+}
+
+.profile-info input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #f9f9f9; /* Light background for inputs */
+  color: #005157; /* Dark text color */
+}
+
+/* Add a cyan border when focusing on the inputs */
+.profile-info input:focus {
+  outline: none;
+  border: 2px solid #00eaff; /* Light cyan border when focused */
+}
+
+/* Adding some space between fields */
+.profile-info input:last-child {
+  margin-bottom: 0;
+}

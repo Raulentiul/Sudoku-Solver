@@ -1,0 +1,135 @@
+/* Navbar container */
+.navbar {
+  width: 100%;
+  background-color: #005157;
+  color: #00eaff;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+/* Navbar menu */
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  justify-content: space-between;
+}
+
+/* Navbar items */
+.navbar-item {
+  font-size: 1.4rem;
+  font-family: "Comic Sans MS", sans-serif;
+  text-align: center;
+  position: relative;
+  flex: 1;
+  display: inline-block;
+  padding: 0 10px;
+}
+
+/* Star before each item */
+.star {
+  font-size: 1.5rem;
+  margin-right: 5px;
+  color: #00eaff;
+}
+
+/* Hover effect for navbar items */
+.navbar-item:hover {
+  color: white;
+  cursor: pointer;
+}
+
+/* Underline effect under navbar items */
+.navbar-item::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background: white;
+  transition: width 0.3s ease;
+  margin: 0 auto;
+  width: 0;
+}
+
+.navbar-item:hover::after {
+  width: 100%;
+}
+
+/* Styling for links inside the navbar */
+.navbar-link {
+  text-decoration: none;
+  color: #00eaff;
+  font-size: 1.2rem;
+  font-family: "Comic Sans MS", sans-serif;
+}
+
+.navbar-link:hover {
+  color: white;
+}
+
+/* Confirmation dialog styling */
+.logout-confirmation {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #005157;
+  color: rgb(7, 35, 53);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(1, 1, 1, 1);
+  z-index: 2000;
+}
+
+.logout-confirmation {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.logout-buttons {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.logout-button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.logout-button.yes {
+  background-color: #3498db;
+  color: white;
+}
+
+.logout-button.yes:hover {
+  background-color: rgb(7, 35, 53);
+}
+
+.logout-button.no {
+  background-color: #3498db;
+  color: white;
+}
+
+.logout-button.no:hover {
+  background-color:rgb(7, 35, 53);
+}
